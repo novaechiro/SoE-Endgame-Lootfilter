@@ -387,11 +387,23 @@ ItemDisplay[es61]: %GREEN%*  %ORANGE%Perfect Essence of the Mind  %GREEN%*%CONTI
 
 // SOUND
 ItemDisplay[dvo OR etor OR sror !TOWN]: %SOUNDID-4719%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[csor !TOWN]: %SOUNDID-4715%%NAME%{%NAME%}%CONTINUE%
+ItemDisplay[csor OR imrn OR lbox !TOWN]: %SOUNDID-4715%%NAME%{%NAME%}%CONTINUE%
 
 // Name
+// ItemDisplay[mfo]: %TAN%Mythic Orb%CONTINUE%
+// ItemDisplay[mfo GROUND]: %GREEN%*  %TAN%Mythic Orb  %GREEN%*%CONTINUE%
+
+// ItemDisplay[ooal]: %TAN%Alchemy Orb%CONTINUE%
+// ItemDisplay[ooal GROUND]: %GREEN%*  %TAN%Alchemy Orb  %GREEN%*%CONTINUE%
+
 ItemDisplay[csor]: %TAN%Chaos Orb%CONTINUE%
 ItemDisplay[csor GROUND]: %GREEN%*  %TAN%Chaos Orb  %GREEN%*%CONTINUE%
+
+ItemDisplay[imrn]: %TAN%Demonic Cube%CONTINUE%
+ItemDisplay[imrn GROUND]: %GREEN%*  %TAN%Demonic Cube  %GREEN%*%CONTINUE%
+
+ItemDisplay[lbox]: %TAN%Puzzlebox%CONTINUE%
+ItemDisplay[lbox GROUND]: %GREEN%*  %TAN%Puzzlebox  %GREEN%*%CONTINUE%
 
 ItemDisplay[dvo]: %TAN%Divine Orb%CONTINUE%
 ItemDisplay[dvo GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Divine Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
