@@ -13,12 +13,6 @@ ItemDisplayFilterName[]: EndGame
 Alias[TOWN]: (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)
 
 //=========================================================================================
-// BLACKLIST ALL
-//=========================================================================================
-
-// ItemDisplay[!TOWN]: %CONTINUE%
-
-//=========================================================================================
 // SUPER SUPER RARE ITEMS
 //=========================================================================================
 
@@ -387,7 +381,7 @@ ItemDisplay[es61]: %GREEN%*  %ORANGE%Perfect Essence of the Mind  %GREEN%*%CONTI
 
 // SOUND
 ItemDisplay[dvo OR etor OR sror !TOWN]: %SOUNDID-4719%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[csor OR imrn OR lbox !TOWN]: %SOUNDID-4715%%NAME%{%NAME%}%CONTINUE%
+ItemDisplay[csor OR imrn OR lbox or ooe !TOWN]: %SOUNDID-4715%%NAME%{%NAME%}%CONTINUE%
 
 // Name
 // ItemDisplay[mfo]: %TAN%Mythic Orb%CONTINUE%
@@ -405,6 +399,9 @@ ItemDisplay[imrn GROUND]: %GREEN%*  %TAN%Demonic Cube  %GREEN%*%CONTINUE%
 ItemDisplay[lbox]: %TAN%Puzzlebox%CONTINUE%
 ItemDisplay[lbox GROUND]: %GREEN%*  %TAN%Puzzlebox  %GREEN%*%CONTINUE%
 
+ItemDisplay[ooe]: %TAN%Extraction Orb%CONTINUE%
+ItemDisplay[ooe GROUND]: %GREEN%*  %TAN%Extraction Orb  %GREEN%*%CONTINUE%
+
 ItemDisplay[dvo]: %TAN%Divine Orb%CONTINUE%
 ItemDisplay[dvo GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Divine Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
 
@@ -413,3 +410,41 @@ ItemDisplay[etor GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*    
 
 ItemDisplay[sror]: %TAN%Sacred Orb%CONTINUE%
 ItemDisplay[sror GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Sacred Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
+
+ItemDisplay[wss]: %RED%Worldstone Shard%CONTINUE%
+
+//=========================================================================================
+// Map Modifier
+//=========================================================================================
+
+// Chisel
+ItemDisplay[ccsl]: %PURPLE%*  %ORANGE%Chisel %WHITE%- %TAN%Quality  %PURPLE%*%CONTINUE%
+ItemDisplay[ccsa]: %PURPLE%*  %ORANGE%Chisel %WHITE%- %TAN%Avarice  %PURPLE%*%CONTINUE%
+ItemDisplay[ccpr]: %PURPLE%*  %ORANGE%Chisel %WHITE%- %TAN%Procurement  %PURPLE%*%CONTINUE%
+
+// Glyph
+ItemDisplay[scnm]: %PURPLE%*  %GREEN%Glyph %WHITE%- %TAN%Nemeses  %PURPLE%*%CONTINUE%
+ItemDisplay[scas]: %PURPLE%*  %GREEN%Glyph %WHITE%- %TAN%Adversaries  %PURPLE%*%CONTINUE%
+ItemDisplay[sccn]: %PURPLE%*  %GREEN%Glyph %WHITE%- %TAN%Corruption  %PURPLE%*%CONTINUE%
+
+// Terror
+ItemDisplay[troo]: %PURPLE%*  %RED%Terror %WHITE%- %TAN%Opulence  %PURPLE%*%CONTINUE%
+ItemDisplay[troe]: %PURPLE%*  %RED%Terror %WHITE%- %TAN%Ethereal  %PURPLE%*%CONTINUE%
+ItemDisplay[tror]: %PURPLE%*  %RED%Terror %WHITE%- %TAN%Resplendence  %PURPLE%*%CONTINUE%
+ItemDisplay[troa]: %PURPLE%*  %RED%Terror %WHITE%- %TAN%Absolute  %PURPLE%*%CONTINUE%
+
+// Hatred Orb
+ItemDisplay[hor1]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Equipment  %PURPLE%*%CONTINUE%
+ItemDisplay[hor2]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Accessories  %PURPLE%*%CONTINUE%
+ItemDisplay[hor3]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Essences  %PURPLE%*%CONTINUE%
+ItemDisplay[hor4]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Fate Cards  %PURPLE%*%CONTINUE%
+ItemDisplay[hor5]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Runes  %PURPLE%*%CONTINUE%
+ItemDisplay[hor6]: %PURPLE%*  %BLUE%Hatred %WHITE%- %TAN%Currency  %PURPLE%*%CONTINUE%
+
+
+//=========================================================================================
+// GLOBAL RULES
+//=========================================================================================
+
+ItemDisplay[!TOWN]: %CONTINUE%
+ItemDisplay[QTY>1]: %NAME%%WHITE% x%QTY%%CONTINUE%
