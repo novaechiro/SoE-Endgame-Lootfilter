@@ -1,0 +1,403 @@
+ItemDisplayFilterName[]: EndGame
+
+// %SOUNDID-4719%: Tink
+// %SOUNDID-619%: Thunderstorm
+// %SOUNDID-418%: Bell Dong
+// %SOUNDID-248%: Whoof
+// %SOUNDID-4715%: Chaos Orb drop sound poe
+
+//=========================================================================================
+// DEFINE ALIASES
+//=========================================================================================
+
+Alias[TOWN]: (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)
+
+//=========================================================================================
+// BLACKLIST ALL
+//=========================================================================================
+
+// ItemDisplay[!TOWN]: %CONTINUE%
+
+//=========================================================================================
+// SUPER SUPER RARE ITEMS
+//=========================================================================================
+
+// llmr - Lilith's Mirror
+// lsvl - Vial of Lightsong
+// rkey - Skeleton Key
+// rid  - Tome of Infinite Identify
+// rtp  - Tome of Infinite Town Portal
+
+// Sound
+ItemDisplay[(llmr OR lsvl OR rkey OR rid OR rtp) !TOWN]: %SOUNDID-619%%NAME%{%NAME%}%CONTINUE%
+
+// Name
+ItemDisplay[llmr OR lsvl OR rkey OR rid OR rtp GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %NAME%        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
+
+// Inventory
+ItemDisplay[llmr OR lsvl OR rkey OR rid OR rtp]: %NAME%%CONTINUE%
+
+//=========================================================================================
+// RUNES
+//=========================================================================================
+
+// Prefix
+ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
+ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
+
+// Sound
+ItemDisplay[RUNE>25 !TOWN]: %SOUNDID-418%%NAME%{%NAME%}%CONTINUE%
+ItemDisplay[RUNE~20-25 !TOWN]: %SOUNDID-248%%NAME%{%NAME%}%CONTINUE%
+
+// Name
+ItemDisplay[RUNE>19 AND RUNE<26]: %DOT-62%%RED%*     %NAME%%RED%     *{%NAME%}%CONTINUE%
+ItemDisplay[RUNE>25]: %BORDER-62%%GREEN%*%PURPLE%*%RED%*          %NAME%%RED%          *%PURPLE%*%GREEN%*{%NAME%}%CONTINUE%
+
+//=========================================================================================
+// GOLD
+//=========================================================================================
+
+ItemDisplay[GOLD<150000]:
+
+//=========================================================================================
+// MAPS
+//=========================================================================================
+
+//Map Immunes (Fire/Cold/Light/Poison/Magic/Phys)
+
+//UNKNOWN MAPS
+ItemDisplay[MAPTIER~1-5 !KNOWNMAPS]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[MAPTIER~1-5 !KNOWNMAPS]: %NAME%{%RED%F%WHITE%:%GRAY%??? %BLACK%| %BLUE%C%WHITE%:%GRAY%??? %BLACK%| %YELLOW%L%WHITE%:%GRAY%??? %BLACK%| %GREEN%P%WHITE%:%GRAY%??? %BLACK%| %ORANGE%M%WHITE%:%GRAY%??? %BLACK%| %GOLD%P%WHITE%:%GRAY%???%CL%%NAME%}%CONTINUE%
+
+//Ruins of Viz-Jun Map
+ItemDisplay[t11]: %NAME%{%WHITE%Boss Damage: %ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t11]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:80 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Horazon's Memory Map
+ItemDisplay[t12]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t12]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Bastion Keep Map
+ItemDisplay[t13]: %NAME%{%WHITE%Boss Damage: %BLUE%Cold %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t13]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:85 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Sanatorium Map
+ItemDisplay[t14]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t14]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:60%CL%%NAME%}%CONTINUE%
+
+//Royal Crypts Map
+ItemDisplay[t15]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t15]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:80 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:45 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Ruined Cistern Map
+ItemDisplay[t16]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%GREEN%Poison %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t16]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:60%CL%%NAME%}%CONTINUE%
+
+//Halls of Torture
+ItemDisplay[t17]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t17]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:85 %BLACK%| %ORANGE%M%WHITE%:35 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Phlegethon Map
+ItemDisplay[t21]: %NAME%{%WHITE%Boss Damage: %RED%Fire %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t21]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:80 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Torajan Jungle Map
+ItemDisplay[t22]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%GREEN%Poison %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t22]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Arreat Battlefield Map
+ItemDisplay[t23]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t23]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Tomb of Zoltun Kulle Map
+ItemDisplay[t24]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%GREEN%Poison %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t24]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Sewers of Harrogath Map
+ItemDisplay[t25]: %NAME%{%WHITE%Boss Damage: %YELLOW%Light %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t25]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:80 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:66%CL%%NAME%}%CONTINUE%
+
+//Shadows of Westmarch Map
+ItemDisplay[t26]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t26]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:85 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Demon Road
+ItemDisplay[t27]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t27]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:40 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Skovos Stronghold
+ItemDisplay[t28]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t28]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:40 %BLACK%| %GOLD%P%WHITE%:55%CL%%NAME%}%CONTINUE%
+
+//River of Blood Map
+ItemDisplay[t31]: %NAME%{%WHITE%Boss Damage: %GREEN%Poison%WHITE%/%BLUE%Cold %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t31]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:66%CL%%NAME%}%CONTINUE%
+
+//Throne of Insanity Map
+ItemDisplay[t32]: %NAME%{%WHITE%Boss Damage: %RED%Fire %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t32]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:%CORAL%120 %BLACK%| %ORANGE%M%WHITE%:75 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Lost Temple Map
+ItemDisplay[t33]: %NAME%{%WHITE%Boss Damage: %GREEN%Poison%WHITE%/%GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t33]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:80 %BLACK%| %GREEN%P%WHITE%:80 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:55%CL%%NAME%}%CONTINUE%
+
+//Ancestral Trial Map
+ItemDisplay[t34]: %NAME%{%WHITE%Boss Damage: %BLUE%Cold %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t34]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Blood Moon Map
+ItemDisplay[t35]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%YELLOW%Light %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t35]: %NAME%{%RED%F%WHITE%:65 %BLACK%| %BLUE%C%WHITE%:65 %BLACK%| %YELLOW%L%WHITE%:65 %BLACK%| %GREEN%P%WHITE%:65 %BLACK%| %ORANGE%M%WHITE%:33 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Fall of Caldeum Map
+ItemDisplay[t36]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t36]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%120 %BLACK%| %GREEN%P%WHITE%:80 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Pandemonium Citadel Map
+ItemDisplay[t37]: %NAME%{%WHITE%Boss Damage: %RED%Fire%WHITE%/%GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t37]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:%CORAL%120 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:80 %BLACK%| %ORANGE%M%WHITE%:%CORAL%105 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Canyon of Sescheron Map
+ItemDisplay[t38]: %NAME%{%WHITE%Boss Damage: %BLUE%Cold %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t38]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:80 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:55 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Kehjistan Marketplace Map
+ItemDisplay[t39]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t39]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:%CORAL%115%CL%%NAME%}%CONTINUE%
+
+//Ashen Plains Map
+ItemDisplay[t3a]: %NAME%{%WHITE%Boss Damage: %RED%Fire%WHITE%/%YELLOW%Light %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t3a]: %NAME%{%RED%F%WHITE%:%CORAL%120 %BLACK%| %BLUE%C%WHITE%:%CORAL%130 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//Kyovoshad
+ItemDisplay[t3b]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t3b]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:66%CL%%NAME%}%CONTINUE%
+
+//Cathedral of Light Map
+ItemDisplay[t41]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t41]: %NAME%{%RED%F%WHITE%:%CORAL%145 %BLACK%| %BLUE%C%WHITE%:%CORAL%145 %BLACK%| %YELLOW%L%WHITE%:%CORAL%145 %BLACK%| %GREEN%P%WHITE%:%CORAL%145 %BLACK%| %ORANGE%M%WHITE%:%CORAL%145 %BLACK%| %GOLD%P%WHITE%:%CORAL%120%CL%%NAME%}%CONTINUE%
+
+//Plains of Torment Map
+ItemDisplay[t42]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t43]: %NAME%{%RED%F%WHITE%:%CORAL%145 %BLACK%| %BLUE%C%WHITE%:%CORAL%145 %BLACK%| %YELLOW%L%WHITE%:%CORAL%145 %BLACK%| %GREEN%P%WHITE%:%CORAL%145 %BLACK%| %ORANGE%M%WHITE%:%CORAL%145 %BLACK%| %GOLD%P%WHITE%:%CORAL%120%CL%%NAME%}%CONTINUE%
+
+//Sanctuary of Sin Map
+ItemDisplay[t43]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t43]: %NAME%{%RED%F%WHITE%:%CORAL%145 %BLACK%| %BLUE%C%WHITE%:%CORAL%165 %BLACK%| %YELLOW%L%WHITE%:%CORAL%145 %BLACK%| %GREEN%P%WHITE%:%CORAL%165 %BLACK%| %ORANGE%M%WHITE%:%CORAL%145 %BLACK%| %GOLD%P%WHITE%:%CORAL%120%CL%%NAME%}%CONTINUE%
+
+//Steppes of Daken-Shar
+ItemDisplay[t44]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t44]: %NAME%{%RED%F%WHITE%:%CORAL%145 %BLACK%| %BLUE%C%WHITE%:%CORAL%145 %BLACK%| %YELLOW%L%WHITE%:%CORAL%145 %BLACK%| %GREEN%P%WHITE%:%CORAL%145 %BLACK%| %ORANGE%M%WHITE%:%CORAL%145 %BLACK%| %GOLD%P%WHITE%:%CORAL%120%CL%%NAME%}%CONTINUE%
+
+//Zhar's Sanctum Map
+ItemDisplay[t51]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t51]: %NAME%{%RED%F%WHITE%:85 %BLACK%| %BLUE%C%WHITE%:85 %BLACK%| %YELLOW%L%WHITE%:85 %BLACK%| %GREEN%P%WHITE%:95 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:65%CL%%NAME%}%CONTINUE%
+
+//Stygian Caverns Map
+ItemDisplay[t52]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t52]: %NAME%{%RED%F%WHITE%:70 %BLACK%| %BLUE%C%WHITE%:65 %BLACK%| %YELLOW%L%WHITE%:65 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:55%CL%%NAME%}%CONTINUE%
+
+//Fallen Gardens Map
+ItemDisplay[t53]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t53]: %NAME%{%RED%F%WHITE%:70 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:65 %BLACK%| %GREEN%P%WHITE%:80 %BLACK%| %ORANGE%M%WHITE%:80 %BLACK%| %GOLD%P%WHITE%:65%CL%%NAME%}%CONTINUE%
+
+//Imperial Palace
+ItemDisplay[t54]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t54]: %NAME%{%RED%F%WHITE%:65 %BLACK%| %BLUE%C%WHITE%:65 %BLACK%| %YELLOW%L%WHITE%:65 %BLACK%| %GREEN%P%WHITE%:65 %BLACK%| %ORANGE%M%WHITE%:20 %BLACK%| %GOLD%P%WHITE%:20%CL%%NAME%}%CONTINUE%
+
+//Outer Void
+ItemDisplay[t55]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t55]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:50 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:30 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//City of Ureh
+ItemDisplay[t56]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t56]: %NAME%{%RED%F%WHITE%:85 %BLACK%| %BLUE%C%WHITE%:80 %BLACK%| %YELLOW%L%WHITE%:%CORAL%100%GRAY%? %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:65%CL%%NAME%}%CONTINUE%
+
+//Djinn's Domain
+ItemDisplay[t57]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t57]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:55%CL%%NAME%}%CONTINUE%
+
+//Na-Krul's Abyss
+ItemDisplay[t58]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t58]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:85 %BLACK%| %YELLOW%L%WHITE%:80 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
+
+//=========================================================================================
+// FATE CARDS
+//=========================================================================================
+
+// Name
+ItemDisplay[fa01]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%The Apothecary%WHITE%%CONTINUE%
+ItemDisplay[fa02]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%The Eye of Terror%WHITE%%CONTINUE%
+ItemDisplay[fa03]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%The Doctor%WHITE%%CONTINUE%
+ItemDisplay[fa04]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%The Sephiroth%WHITE%%CONTINUE%
+ItemDisplay[fa05]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%The Immortal%WHITE%%CONTINUE%
+ItemDisplay[fa06]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%Wealth and Power%WHITE%%CONTINUE%
+ItemDisplay[fa07]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%House of Mirrors%WHITE%%CONTINUE%
+ItemDisplay[fa08]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%Unrequited Love%WHITE%%CONTINUE%
+ItemDisplay[fa09]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%Seraphic Favor%WHITE%%CONTINUE%
+ItemDisplay[fa10]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%Alluring Bounty%WHITE%%CONTINUE%
+ItemDisplay[fa11]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%A Fate Worse Than Death%WHITE%%CONTINUE%
+ItemDisplay[fa12]: %SOUNDID-4715%%MAP-4A%%BORDER-9B%%RED%[T0] %WHITE%A Stone Perfected%WHITE%%CONTINUE%
+
+ItemDisplay[fa13]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%Lonely Warrior%WHITE%%CONTINUE%
+ItemDisplay[fa14]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%The Polymath%WHITE%%CONTINUE%
+ItemDisplay[fa15]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%Iridescent Dream%WHITE%%CONTINUE%
+ItemDisplay[fa16]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%The Web%WHITE%%CONTINUE%
+ItemDisplay[fa17]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%I See Brothers%WHITE%%CONTINUE%
+ItemDisplay[fa18]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%The Reaper%WHITE%%CONTINUE%
+ItemDisplay[fa19]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%The Shieldbearer%WHITE%%CONTINUE%
+ItemDisplay[fa20]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%The Avenger%WHITE%%CONTINUE%
+ItemDisplay[fa21]: %MAP-4A%%BORDER-68%%PURPLE%[T1] %WHITE%Gemcutters Promise%WHITE%%CONTINUE%
+
+ItemDisplay[fa22]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Chaotic Disposition%WHITE%%CONTINUE%
+ItemDisplay[fa23]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%The Unexpected Prize%WHITE%%CONTINUE%
+ItemDisplay[fa24]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Further Invention%WHITE%%CONTINUE%
+ItemDisplay[fa25]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Gemcutters Mercy%WHITE%%CONTINUE%
+ItemDisplay[fa26]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Lost Worlds%WHITE%%CONTINUE%
+ItemDisplay[fa27]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Boundless Realms%WHITE%%CONTINUE%
+ItemDisplay[fa28]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%The Journey%WHITE%%CONTINUE%
+ItemDisplay[fa29]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%Cartographers Delight%WHITE%%CONTINUE%
+ItemDisplay[fa30]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%The Cartographer%WHITE%%CONTINUE%
+ItemDisplay[fa31]: %MAP-4A%%BORDER-68%%ORANGE%[T2] %WHITE%More is Never Enough%WHITE%%CONTINUE%
+
+ItemDisplay[fa32]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Ambush%WHITE%%CONTINUE%
+ItemDisplay[fa33]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Artist%WHITE%%CONTINUE%
+ItemDisplay[fa34]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Misery in Darkness%WHITE%%CONTINUE%
+ItemDisplay[fa35]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Bowyers Dream%WHITE%%CONTINUE%
+ItemDisplay[fa36]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Dormant Allure%WHITE%%CONTINUE%
+ItemDisplay[fa37]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Assegai%WHITE%%CONTINUE%
+ItemDisplay[fa38]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Rite of Elements%WHITE%%CONTINUE%
+ItemDisplay[fa39]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Call of the First Ones%WHITE%%CONTINUE%
+ItemDisplay[fa40]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Therianthropy%WHITE%%CONTINUE%
+ItemDisplay[fa41]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Cursed Words%WHITE%%CONTINUE%
+ItemDisplay[fa42]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Dark Mage%WHITE%%CONTINUE%
+ItemDisplay[fa43]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Lich%WHITE%%CONTINUE%
+ItemDisplay[fa44]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Celestial Justicar%WHITE%%CONTINUE%
+ItemDisplay[fa45]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Crusader%WHITE%%CONTINUE%
+ItemDisplay[fa46]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Bulwark%WHITE%%CONTINUE%
+ItemDisplay[fa47]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%A Chilling Wind%WHITE%%CONTINUE%
+ItemDisplay[fa48]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Blazing Fire%WHITE%%CONTINUE%
+ItemDisplay[fa49]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Coming Storm%WHITE%%CONTINUE%
+ItemDisplay[fa50]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Warlord%WHITE%%CONTINUE%
+ItemDisplay[fa51]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Battle Born%WHITE%%CONTINUE%
+ItemDisplay[fa52]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Skirmisher%WHITE%%CONTINUE%
+ItemDisplay[fa53]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%The Undaunted%WHITE%%CONTINUE%
+ItemDisplay[fa54]: %MAP-4A%%DOT-68%%BLUE%[T3] %WHITE%Gemcutters Gift%WHITE%%CONTINUE%
+
+ItemDisplay[fa55]: %MAP-4A%%DOT-68%%GREEN%[T4] %WHITE%The Archmages Right Hand%WHITE%%CONTINUE%
+ItemDisplay[fa56]: %MAP-4A%%DOT-68%%GREEN%[T4] %WHITE%The Survivalist%WHITE%%CONTINUE%
+ItemDisplay[fa57]: %MAP-4A%%DOT-68%%GREEN%[T4] %WHITE%Abandoned Wealth%WHITE%%CONTINUE%
+ItemDisplay[fa58]: %MAP-4A%%DOT-68%%GREEN%[T4] %WHITE%The Scout%WHITE%%CONTINUE%
+
+ItemDisplay[fa59]: %MAP-4A%%DOT-68%%GRAY%[T5] %WHITE%Glimmer of Hope%WHITE%%CONTINUE%
+ItemDisplay[fa60]: %MAP-4A%%DOT-68%%GRAY%[T5] %WHITE%The Escape%WHITE%%CONTINUE%
+ItemDisplay[fa61]: %MAP-4A%%DOT-68%%GRAY%[T5] %WHITE%Humility%WHITE%%CONTINUE%
+ItemDisplay[fa62]: %MAP-4A%%DOT-68%%GRAY%[T5] %WHITE%The Saints Treasure%WHITE%%CONTINUE%
+ItemDisplay[fa63]: %MAP-4A%%DOT-68%%GRAY%[T5] %WHITE%The Inventor%WHITE%%CONTINUE%
+
+//=========================================================================================
+// ESSENCES
+//=========================================================================================
+
+ItemDisplay[es01]: %WHITE%Essence of Abrasion%CONTINUE%
+ItemDisplay[es02]: %GREEN%Greater Essence of Abrasion%CONTINUE%
+ItemDisplay[es03]: %GREEN%*  %ORANGE%Perfect Essence of Abrasion  %GREEN%*%CONTINUE%
+
+ItemDisplay[es04]: %WHITE%Essence of Alacrity%CONTINUE%
+ItemDisplay[es05]: %GREEN%Greater Essence of Alacrity%CONTINUE%
+ItemDisplay[es06]: %GREEN%*  %ORANGE%Perfect Essence of Alacrity  %GREEN%*%CONTINUE%
+
+ItemDisplay[es07]: %WHITE%Essence of Antitoxin%CONTINUE%
+ItemDisplay[es08]: %GREEN%Greater Essence of Antitoxin%CONTINUE%
+ItemDisplay[es09]: %GREEN%*  %ORANGE%Perfect Essence of Antitoxin  %GREEN%*%CONTINUE%
+
+ItemDisplay[es10]: %WHITE%Essence of Battle%CONTINUE%
+ItemDisplay[es11]: %GREEN%Greater Essence of Battle%CONTINUE%
+ItemDisplay[es12]: %GREEN%*  %ORANGE%Perfect Essence of Battle  %GREEN%*%CONTINUE%
+
+ItemDisplay[es13]: %WHITE%Essence of Electricity%CONTINUE%
+ItemDisplay[es14]: %GREEN%Greater Essence of Electricity%CONTINUE%
+ItemDisplay[es15]: %GREEN%*  %ORANGE%Perfect Essence of Electricity  %GREEN%*%CONTINUE%
+
+ItemDisplay[es16]: %WHITE%Essence of Enhancement%CONTINUE%
+ItemDisplay[es17]: %GREEN%Greater Essence of Enhancement%CONTINUE%
+ItemDisplay[es18]: %GREEN%*  %ORANGE%Perfect Essence of Enhancement  %GREEN%*%CONTINUE%
+
+ItemDisplay[es19]: %WHITE%Essence of Flames%CONTINUE%
+ItemDisplay[es20]: %GREEN%Greater Essence of Flames%CONTINUE%
+ItemDisplay[es21]: %GREEN%*  %ORANGE%Perfect Essence of Flames  %GREEN%*%CONTINUE%
+
+ItemDisplay[es22]: %WHITE%Essence of Grounding%CONTINUE%
+ItemDisplay[es23]: %GREEN%Greater Essence of Grounding%CONTINUE%
+ItemDisplay[es24]: %GREEN%*  %ORANGE%Perfect Essence of Grounding  %GREEN%*%CONTINUE%
+
+ItemDisplay[es25]: %WHITE%Essence of Haste%CONTINUE%
+ItemDisplay[es26]: %GREEN%Greater Essence of Haste%CONTINUE%
+ItemDisplay[es27]: %GREEN%*  %ORANGE%Perfect Essence of Haste  %GREEN%*%CONTINUE%
+
+ItemDisplay[es28]: %WHITE%Essence of Ice%CONTINUE%
+ItemDisplay[es29]: %GREEN%Greater Essence of Ice%CONTINUE%
+ItemDisplay[es30]: %GREEN%*  %ORANGE%Perfect Essence of Ice  %GREEN%*%CONTINUE%
+
+ItemDisplay[es31]: %RED%Essence of Insanity%CONTINUE%
+
+ItemDisplay[es32]: %WHITE%Essence of Insulation%CONTINUE%
+ItemDisplay[es33]: %GREEN%Greater Essence of Insulation%CONTINUE%
+ItemDisplay[es34]: %GREEN%*  %ORANGE%Perfect Essence of Insulation  %GREEN%*%CONTINUE%
+
+ItemDisplay[es35]: %WHITE%Essence of Rage%CONTINUE%
+ItemDisplay[es36]: %GREEN%Greater Essence of Rage%CONTINUE%
+ItemDisplay[es37]: %GREEN%*  %ORANGE%Perfect Essence of Rage  %GREEN%*%CONTINUE%
+
+ItemDisplay[es38]: %WHITE%Essence of Scorn%CONTINUE%
+ItemDisplay[es39]: %GREEN%Greater Essence of Scorn%CONTINUE%
+ItemDisplay[es40]: %GREEN%*  %ORANGE%Perfect Essence of Scorn  %GREEN%*%CONTINUE%
+
+ItemDisplay[es41]: %WHITE%Essence of Seeking%CONTINUE%
+ItemDisplay[es42]: %GREEN%Greater Essence of Seeking%CONTINUE%
+ItemDisplay[es43]: %GREEN%*  %ORANGE%Perfect Essence of Seeking  %GREEN%*%CONTINUE%
+
+ItemDisplay[es44]: %WHITE%Essence of Sorcery%CONTINUE%
+ItemDisplay[es45]: %GREEN%Greater Essence of Sorcery%CONTINUE%
+ItemDisplay[es46]: %GREEN%*  %ORANGE%Perfect Essence of Sorcery  %GREEN%*%CONTINUE%
+
+ItemDisplay[es47]: %WHITE%Essence of Spite%CONTINUE%
+ItemDisplay[es48]: %GREEN%Greater Essence of Spite%CONTINUE%
+ItemDisplay[es49]: %GREEN%*  %ORANGE%Perfect Essence of Spite  %GREEN%*%CONTINUE%
+
+ItemDisplay[es50]: %WHITE%Essence of Thawing%CONTINUE%
+ItemDisplay[es51]: %GREEN%Greater Essence of Thawing%CONTINUE%
+ItemDisplay[es52]: %GREEN%*  %ORANGE%Perfect Essence of Thawing  %GREEN%*%CONTINUE%
+
+ItemDisplay[es53]: %WHITE%Essence of Venom%CONTINUE%
+ItemDisplay[es54]: %GREEN%Greater Essence of Venom%CONTINUE%
+ItemDisplay[es55]: %GREEN%*  %ORANGE%Perfect Essence of Venom  %GREEN%*%CONTINUE%
+
+ItemDisplay[es56]: %WHITE%Essence of the Body%CONTINUE%
+ItemDisplay[es57]: %GREEN%Greater Essence of the Body%CONTINUE%
+ItemDisplay[es58]: %GREEN%*  %ORANGE%Perfect Essence of the Body  %GREEN%*%CONTINUE%
+
+ItemDisplay[es59]: %WHITE%Essence of the Mind%CONTINUE%
+ItemDisplay[es60]: %GREEN%Greater Essence of the Mind%CONTINUE%
+ItemDisplay[es61]: %GREEN%*  %ORANGE%Perfect Essence of the Mind  %GREEN%*%CONTINUE%
+
+//=========================================================================================
+// CURRENCIES
+//=========================================================================================
+
+// SOUND
+ItemDisplay[dvo OR etor OR sror !TOWN]: %SOUNDID-4719%%NAME%{%NAME%}%CONTINUE%
+ItemDisplay[csor !TOWN]: %SOUNDID-4715%%NAME%{%NAME%}%CONTINUE%
+
+// Name
+ItemDisplay[csor]: %TAN%Chaos Orb%CONTINUE%
+ItemDisplay[csor GROUND]: %GREEN%*  %TAN%Chaos Orb  %GREEN%*%CONTINUE%
+
+ItemDisplay[dvo]: %TAN%Divine Orb%CONTINUE%
+ItemDisplay[dvo GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Divine Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
+
+ItemDisplay[etor]: %TAN%Eternal Orb%CONTINUE%
+ItemDisplay[etor GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Eternal Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
+
+ItemDisplay[sror]: %TAN%Sacred Orb%CONTINUE%
+ItemDisplay[sror GROUND]: %ORANGE%pick %GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %TAN%Sacred Orb        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*%ORANGE% up%CONTINUE%
